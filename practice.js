@@ -35,7 +35,7 @@ var blue = 0;
 var green = 0;
 
 function drawBall(){
-  context.fillStyle = "#"+red+blue+green;
+  context.fillStyle = "#00ffff";
   context.beginPath();
   context.arc(x,y,r,0,2*Math.PI);
   context.clearRect(0,0,500,500);
@@ -65,7 +65,7 @@ canvas.addEventListener("click",function(event){
   // console.log(event)
   if((event.x >= (x-r) && event.x <= (x+r)) && ((event.y-69) >= (y-r) && (event.y-69) <= (y+r))){
     numberOfBallClicks += 1;
-    r+= Math.random()*10;
+    r-= 5;
     document.getElementById("click-count").innerHTML = String(numberOfBallClicks);
   }
 });

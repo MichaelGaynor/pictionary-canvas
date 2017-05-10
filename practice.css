@@ -1,6 +1,37 @@
 h1{
-  color: blue;
+  color: magenta;
+  background-color: yellow;
 }
 canvas{
   float: left;
+  background-color: #ff00ff;
+}
+div#st_block{
+  float: left;
+  width: 250px;
+  height: 500px;
+  margin-left: 10px;
+  background-color: magenta;
+}
+
+div#nd_block{
+  float: left;
+  width: 250px;
+  height: 250px;
+  margin-left: 10px;
+  background-color: yellow;
+}
+div#rd_block{
+  float: left;
+  width: 250px;
+  height: 250px;
+  margin-left: 10px;
+  background-color: magenta;
+}
+div#th_block{
+  float: right;
+  width: 130px;
+  height: 500px;
+  margin-left: 10px;
+  background-color: yellow;
 }
