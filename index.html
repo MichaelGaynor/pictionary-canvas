@@ -4,17 +4,52 @@
   <title></title>
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <style type="text/css">
-    
+    body{
+      font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+      padding: 20px;
+      color: purple;
+      background-image: url("https://rfclipart.com/image/big/c1-5f-46/abstract-soft-pink-fabric-background-Download-Royalty-free-Vector-File-EPS-62390.jpg");
+    }
+    div{
+      /* display: inline-block; */
+    }
     canvas{
-      border:  10px dashed plum;
+      border:  10px dashed purple;
       border-radius: 100px;
+      background-color: rgba(255,255,255,.7)
     }
     div#toolbar{
-      font-family: sans-serif;
-      font-size: 1.3em;
+      /* font-family: sans-serif; */
+      font-size: 1em;
+      border:  3px dashed magenta;
+      border-radius: 100px;
+      background-color: lavender/* rgba(255,255,255,.7) */;
+      text-align: right;
+      /* height: 200px; */
+      overflow: hidden;
     }
-    div#toolbar hr{
-      border: 0;
+    div#title{
+      /* font-family: sans-serif; */
+      font-weight: bold;
+      font-size: 3.7em;
+      border:  5px dashed magenta;
+      color: magenta;
+      /* text-shadow: -350px 0 yellow, 0 30px yellow, 350px 0 yellow, 0 -30px yellow; */
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+      margin: 5px auto 30px;
+      border-radius: 200px;
+      background-color: cyan;
+      background-color: lavender;
+      height: 100px;
+      text-align: center;
+      line-height: 100px;
+    }
+    input,label{
+      margin: 35px 10px 35px 0;
+    }
+    input{
+      width: 50px;
+      margin: 0 30px 0 0;
     }
 
   </style>
@@ -22,18 +57,25 @@
 <body>
 <div class="container">
   <div class="row">
-    <div id="toolbar" class="co-sm-8">
-      <label>Choose your marker color!</label>
-      <hr>
-      <input type="color" id="color-picker"/>
-      <hr>
-      <label>Choose your marker thickness!</label>
-      <hr>
-      <input type="number" id="thickness" placeholder="10"/>
-      <hr>
+    <div clas="col-sm-12" id="title">
+      <span>QUILTIONARY!</span>
     </div>
-    <div class="co-sm-4">
-      <canvas id="canvas" height="500px" width="500px"></canvas>
+    <div class="col-sm-12">
+      <div class="col-sm-8">
+        <canvas id="canvas" height="500px" width="500px"></canvas>
+      </div>
+      <div  id="toolbar" class="col-sm-4">
+        <div id="toolbar1" class="col-sm-12">
+          <label>Choose a color!</label>
+          <!-- <hr> -->
+          <input type="color" id="color-picker"/>
+        </div>
+        <div id="toolbar2" class="col-sm-12">
+          <label>Choose a thickness!</label>
+          <!-- <hr> -->
+          <input type="number" id="thickness" placeholder="10"/>
+        </div>
+      </div>
     </div>
   </div>
 </div>
