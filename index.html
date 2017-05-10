@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style type="text/css">
+    
+    canvas{
+      border:  10px dashed plum;
+      border-radius: 100px;
+    }
+    div#toolbar{
+      font-family: sans-serif;
+      font-size: 1.3em;
+    }
+    div#toolbar hr{
+      border: 0;
+    }
+
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div id="toolbar" class="co-sm-8">
+      <label>Choose your marker color!</label>
+      <hr>
+      <input type="color" id="color-picker"/>
+      <hr>
+      <label>Choose your marker thickness!</label>
+      <hr>
+      <input type="number" id="thickness" placeholder="10"/>
+      <hr>
+    </div>
+    <div class="co-sm-4">
+      <canvas id="canvas" height="500px" width="500px"></canvas>
+    </div>
+  </div>
+</div>
+
+  <script type="text/javascript" src="scripts.js"></script>
+</body>
+</html>
