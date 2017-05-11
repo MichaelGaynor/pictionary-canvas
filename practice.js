@@ -1,9 +1,14 @@
 // console.log("Hello, World")
 
 var numberOfBallClicks = 0;
+var timer = 0;
 // var score =document.getElementById("click-count").innerHTML = String(numberOfBallClicks);
 var canvas = document.getElementById("canvas");
 var context = canvas.getContext('2d');
+var victory = document.getElementById("victory");
+var gif = document.getElementById("gif");
+var gif2 = document.getElementById("gif2");
+var gif3 = document.getElementById("gif3");
 // context.moveTo(0,0);
 // Move the pen/tool to 100,100
 context.moveTo(115,100);
@@ -35,9 +40,11 @@ var blue = 0;
 var green = 0;
 
 function drawBall(){
-  context.fillStyle = "#00ffff";
+  context.fillStyle = "white";
   context.beginPath();
   context.arc(x,y,r,0,2*Math.PI);
+  context.shadowBlur = 50;
+  context.shadowColor = "yellow";
   context.clearRect(0,0,500,500);
   context.fill();
   if((x>=500-r)||(x<=0+r)){
@@ -59,6 +66,8 @@ function drawBall(){
   green += 5;
 };
 
+console.log(victory.outerHTML);
+
 var ball = setInterval(drawBall,20);
 
 canvas.addEventListener("click",function(event){
@@ -67,8 +76,21 @@ canvas.addEventListener("click",function(event){
     numberOfBallClicks += 1;
     r-= 5;
     document.getElementById("click-count").innerHTML = String(numberOfBallClicks);
+    if (numberOfBallClicks == 10){
+      victory.style = "visbility:visible;"
+      gif.style = "visbility:visible;"
+      gif2.style = "visbility:visible;"
+      gif3.style = "visbility:visible;"
+    }
   }
 });
+
+setInterval(function(){
+  document.getElementById("timer").innerHTML = String(timer);
+  if (numberOfBallClicks !== 10){
+    timer +=1;
+  }
+},1000)
 
 // var x2 = 300;
 // var y2 = 100;

@@ -1,37 +1,77 @@
+body{
+  background-color: black;
+}
+div{
+  margin: 10px 5px 0;
+}
 h1{
   color: magenta;
   background-color: yellow;
 }
+span#victory{
+  font-size: 10em;
+  color: magenta;
+  position: fixed;
+  left: 0;
+  top: 0;
+  animation-name: example;
+  animation-duration: .5s;
+  animation-iteration-count: infinite;
+}
+.rd_block p{
+  color: cyan;
+  font-size: 2em;
+}
+span#timer{
+  color: yellow;
+}
+
+img#gif,img#gif2,img#gif3{
+  max-width: 100%;
+}
+
+@keyframes example{
+  /* from {color: cyan; } */
+  /* to {color: yellow; }*/
+  0% {color:yellow;}
+  17% {color:cyan;}
+  50% {color:magenta;}
+  83% {color:yellow;}
+}
+
 canvas{
   float: left;
-  background-color: #ff00ff;
+  margin: 10px 5px 0;
+  background: url("http://wallpaper.pickywallpapers.com/ipad/preview/space-galaxy-widescreen-wallpaper-background.jpg");
+  cursor: url(images/Bill_Nye3.png) 6 34, auto;
 }
-div#st_block{
+
+canvas:active, canvas:focus {
+  cursor: url(images/Bill_Nye3.png) 6 34, pointer;
+}
+
+div.st_block{
   float: left;
-  width: 250px;
+  width: 245px;
   height: 500px;
-  margin-left: 10px;
   background-color: magenta;
 }
 
-div#nd_block{
+div.nd_block{
   float: left;
-  width: 250px;
-  height: 250px;
-  margin-left: 10px;
+  width: 245px;
+  height: 245px;
   background-color: yellow;
 }
-div#rd_block{
+div.rd_block{
   float: left;
-  width: 250px;
-  height: 250px;
-  margin-left: 10px;
+  width: 245px;
+  height: 245px;
   background-color: magenta;
 }
-div#th_block{
-  float: right;
-  width: 130px;
-  height: 500px;
-  margin-left: 10px;
-  background-color: yellow;
+div.th_block{
+  float: left;
+  width: 755px;
+  height: 50px;
+  background-color: magenta;
 }
