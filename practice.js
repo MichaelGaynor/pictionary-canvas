@@ -75,6 +75,7 @@ canvas.addEventListener("click",function(event){
   if((event.x >= (x-r) && event.x <= (x+r)) && ((event.y-69) >= (y-r) && (event.y-69) <= (y+r))){
     numberOfBallClicks += 1;
     r-= 5;
+
     document.getElementById("click-count").innerHTML = String(numberOfBallClicks);
     if (numberOfBallClicks == 10){
       victory.style = "visbility:visible;"
